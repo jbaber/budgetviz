@@ -10,7 +10,7 @@ setuptools.setup(name='budgetviz',
   },
   install_requires=[
     'sqlalchemy',
-    'yaml',
+    'PyYAML',
     'webbrowser',
     'docopt',
   ],
