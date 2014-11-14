@@ -1,0 +1,5 @@
+Use d3.js interface
+- Use a slider to set begin and end dates
+- Drag and drop to re-categorize entries
+- Click on a category to zoom to it.
+Include local copy of d3.js so internet connection not needed

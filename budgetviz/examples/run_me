@@ -1,0 +1,1 @@
+budgetviz --config=config.yaml credit_card_1.csv credit_card_2.csv

@@ -1,0 +1,38 @@
+categories:
+  Amazon Digital Svcs: mp3s
+  'COSTCO GAS #1234': car
+  'COSTCO WHSE #1234': groceries
+  'GIANT FOOD INC #123': groceries
+  'LOWES #01234': house
+  OFFICE DEPOT 1234: office
+  Payment Thank You Bill Pay: payment
+  PHILLIPS 66: car
+  SHELL GAS 123: car
+  TACO BELL 12345: junk food
+  'WAL-MART #1234': walmart
+layouts:
+  credit_card_1:
+    cost: Amount
+    cost_multiplier: -1
+    date: Trans Date
+    date_string: '%m/%d/%Y'
+    description: Description
+    has_header_row: true
+    other_fields: [Type, Post Date]
+    line_regexes: [
+      '^Type\s*,\s*Trans Date\s*,\s*Post Date\s*,\s*Description\s*,\s*Amount\s*$',
+      '^[A-Za-z]+,\d{2}/\d{2}/\d{4},\d{2}/\d{2}/\d{4},.*,-?\d+\.\d\d\s*$',
+    ]
+  credit_card_2:
+    cost: 1
+    cost_multiplier: -1
+    date: 0
+    date_string: '%m/%d/%Y'
+    description: 2
+    has_header_row: false
+    other_fields: []
+    line_regexes: [
+      '^\d{2}/\d{2}/\d{4},-?\d+\.\d{2},.*$',
+      '^\d{2}/\d{2}/\d{4},-?\d+\.\d{2},.*$',
+    ]
+blacklist: [payment]
